@@ -1,0 +1,113 @@
+Meta data (simple) for the transect_data.csv file
+
+# This file includes data entered from data sheets (up to column AA if open in excel, i.e. the "Comments" column), 
+# with the last three columns ("obs", "taxa", "Est.dist.sc") are processed columns and appended to dataset
+
+# Survey_ID:
+Unique identifier for each transect. Format is the following ->
+YEAR-MONTH-DAY followed by observer initials (JH, KM, LDC, TM) then time of day (M, A, E, N), then whether if on or off trail
+Time of day is loose, and represents order of trials in a day 
+M = morning = 1st transect of the day
+A = afternoon = 2nd ...
+E = evening = 3rd ...
+N = night = 4th ...
+
+# Recorder:
+Recorder is the facilitator, i.e. the person who follows the observer pair and records the meta data
+
+#I D
+An ID number assigned per paired transects after fieldwork was completed for data cleaning
+
+# Park.name
+The name of the provincial park or protected area in British Columbia that the transects took place
+
+# Trail.name
+The name of the trail that the "on-trail" observer conducted their transect on
+
+# Date
+The date the transect took place
+
+# Start.time
+The time in PST that the transect began
+
+# End.time
+The time in PST that the transect ended
+
+# Pictures.location
+Equipment the faciliator (called recorder in this csv file) used for photographing trail habitat and datasheet
+
+# Main.habitat.type
+Dominant habitat type the observers surveyed in. 
+Forest = closed canopy forest
+Woodland = open canopy forest
+Grassland = grasslands and shrublands
+
+# Dominant.vegetation
+The tallest vegetation with the most coverage
+
+# Substrate
+The substrate type that the "off_trail" person encountered. 
+Note: this variable was not standardized between the two facilitators, so the term is qualitative.
+
+# Trail.type
+Substrate of the trail the transect took place
+
+# Trail.width
+Unit is in meters.
+
+# Morning.Afternoon.Evening
+Indicates order of the transects in one day
+Morning = 1st transect of the day
+Afternoon = 2nd ...
+Evening = 3rd ...
+Night = 4th ...
+
+# Trail position
+Indicates whether the observer was on the trail or surveying off trail
+
+# Observer name
+The observer that conducted that transect
+
+# Trip.distance..m
+This is the trip distance measured by the GPS unit for each observer (in meters). 
+However, it often gave very incorrect distances traveled and showed incorrect paths the observer took when in forests or in ravines
+We still measured the trip distance after we began including "straight-line" distances after May 26, 2021.
+
+# Distance.between.start.and.finish..m
+As the crow flies (straight-line) distance from start to end of a transect per observer in meters. 
+Began measuring in field after May 26, 2021.
+
+# Estimated distance
+Since we updated the methods to measure distances after May 26, 2021, 
+we estimated the straight line distance by measuring the distance between the first and last geotagged photo on iNaturalist for each transect on May 24 and 26, 2021
+using the adehabitatLT r package to get the missing straight-line distances
+
+# Cliffs
+Whether an observer encountered the cliff (vertical rock face) mesohabitat
+
+# Seep
+Whether an observer encountered the seep (damp depression) mesohabitat
+
+# Creek
+Whether an observer encountered the creek (small running water) mesohabitat
+
+# Water.pool
+Whether an observer encountered the pool of water (standing wate) mesohabitat
+
+# Other
+This was included if the observer or facilitator found a mesohabitat not captured in the datasheet
+
+# Total
+The total number of mesohabitats encountered by the observer on the transect
+
+# Comments
+Any notable events observed by the obervers or facilitators
+
+# obs
+The number of observations made during that transect
+
+# taxa
+The number of different taxa (i.e. taxonomic richness) observed during the transect
+
+# Est.dist.sc
+The estimated distance variable scaled to a mean of zero and standard deviation of 1
